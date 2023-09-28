@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,37 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Рецепты вкусов</title>
+    
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(255, 237, 156)">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Рецепты вкусов</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#recipes">Рецепты</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Авторы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Мои рецепты</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-3" type="search" placeholder="Поиск" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Поиск</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
+    @extends('layouts.app')
     <main>
         <section>
             <div class="hero-photo">
@@ -63,14 +35,14 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">Классическая шарлотка</h5>
+                                    <h3 class="card-title">Классическая шарлотка</h3>
                                     <p class="card-text">Классическая шарлотка. Важное сладкое блюдо советской и
                                         постсоветской истории. Легкое, пышное тесто, максимум яблочной начинки — у
                                         шарлотки всегда был образ приятного, простого и при этом лакомого и диетического
                                         блюда.</p>
                                     <p class="card-text"><small class="text-body-secondary">Автор: Татьяна</small></p>
-                                    <button class="btn"
-                                        style="background-color: rgb(255, 212, 71)">Подробнее...</button>
+                                    <a class="btn" href="/detail"
+                                        style="background-color: rgb(255, 212, 71)">Подробнее...</a>
                                 </div>
                             </div>
                         </div>
@@ -82,14 +54,14 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">Классическая шарлотка</h5>
+                                    <h3 class="card-title">Классическая шарлотка</h3>
                                     <p class="card-text">Классическая шарлотка. Важное сладкое блюдо советской и
                                         постсоветской истории. Легкое, пышное тесто, максимум яблочной начинки — у
                                         шарлотки всегда был образ приятного, простого и при этом лакомого и диетического
                                         блюда.</p>
                                     <p class="card-text"><small class="text-body-secondary">Автор: Татьяна</small></p>
-                                    <button class="btn"
-                                        style="background-color: rgb(255, 212, 71)">Подробнее...</button>
+                                    <a class="btn" href="/detail"
+                                        style="background-color: rgb(255, 212, 71)">Подробнее...</a>
                                 </div>
                             </div>
                         </div>
@@ -101,14 +73,14 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">Классическая шарлотка</h5>
+                                    <h3 class="card-title">Классическая шарлотка</h3>
                                     <p class="card-text">Классическая шарлотка. Важное сладкое блюдо советской и
                                         постсоветской истории. Легкое, пышное тесто, максимум яблочной начинки — у
                                         шарлотки всегда был образ приятного, простого и при этом лакомого и диетического
                                         блюда.</p>
                                     <p class="card-text"><small class="text-body-secondary">Автор: Татьяна</small></p>
-                                    <button class="btn"
-                                        style="background-color: rgb(255, 212, 71)">Подробнее...</button>
+                                    <a class="btn" href="/detail"
+                                        style="background-color: rgb(255, 212, 71)">Подробнее...</a>
                                 </div>
                             </div>
                         </div>
@@ -120,14 +92,15 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">Классическая шарлотка</h5>
+                                    <h3 class="card-title">Классическая шарлотка</h3>
                                     <p class="card-text">Классическая шарлотка. Важное сладкое блюдо советской и
                                         постсоветской истории. Легкое, пышное тесто, максимум яблочной начинки — у
                                         шарлотки всегда был образ приятного, простого и при этом лакомого и вкусного
                                         блюда.</p>
                                     <p class="card-text"><small class="text-body-secondary">Автор: Татьяна</small></p>
-                                    <button class="btn"
-                                        style="background-color: rgb(255, 212, 71)">Подробнее...</button>
+                                    <a class="btn" href="/detail"
+                                        style="background-color: rgb(255, 212, 71)">Подробнее...</a>
+                                        
                                 </div>
                             </div>
                         </div>
