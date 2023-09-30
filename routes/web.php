@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\RecipesController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [RecipesController::class, 'index']);
+
+Route::get('/register', [RegisterController::class, 'show']);
+
+Route::post('/register/create', [RegisterController::class, 'create'])->name('register');
 
 Auth::routes();
 

@@ -47,7 +47,6 @@
     position: relative;
     padding: 20px 0 20px 40px;
     color: #D29D25;
-    font-variant: small-caps;
     font-weight: bold;
     cursor: pointer;
   }
@@ -73,3 +72,11 @@
   }
   .push li:hover:before{box-shadow: 0 0 0 10px rgba(0,0,0,.2)}
   .push li:last-child:after {content: none;}
+
+  .short-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
+ }

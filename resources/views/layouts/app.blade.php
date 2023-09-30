@@ -16,7 +16,7 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center" style="gap: 20px">
-                    <a href="" class="nav-item nav-link">Регистрация</a>
+                    <a href="/register" class="nav-item nav-link">Регистрация</a>
                     <a href="" class="nav-item nav-link">Вход</a>
                     <form action="" method="POST" class="form-inline">
                         @csrf
