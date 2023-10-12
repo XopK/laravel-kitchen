@@ -40,9 +40,9 @@
                                     <div class="card-body">
                                         <h3 class="card-title">{{$item->title}}</h3>
                                         <p class="card-text short-text">{{$item->description}}</p>
-                                        <p class="card-text"><small class="text-body-secondary">Автор: {{$item->id_user}}</small>
+                                        <p class="card-text"><small class="text-body-secondary">Автор: {{$item->user->name}}</small>
                                         </p>
-                                        <a class="btn" href="/detail"
+                                        <a class="btn" href="/detail/{{$item->id}}"
                                             style="background-color: rgb(255, 212, 71)">Подробнее...</a>
                                     </div>
                                 </div>

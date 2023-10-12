@@ -1,82 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
 
 * {
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
     font-weight: 600;
 }
 
-.hero{
+.hero {
     position: relative;
-    background: 
-		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-		url(/images/ryba-fasol-ovoshchi-maslo-pomidory-orekhi.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: top;    
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(/images/ryba-fasol-ovoshchi-maslo-pomidory-orekhi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
     width: 100%;
     height: 800px;
     text-align: center;
 }
-.hero-text{
-	position: absolute;
-	top: 50%;
+.hero-text {
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.hero-text>h1{
+.hero-text > h1 {
     font-size: 70px;
     font-weight: bold;
     color: white;
 }
-.hero-text>p{
+.hero-text > p {
     font-size: 35px;
     font-weight: 400;
     color: white;
     font-style: italic;
-    
 }
-.list{
+.list {
     margin: 10px auto;
 }
 .push {
     list-style: none;
     font-family: "Lucida Sans";
-  }
-  .push li {
+}
+.push li {
     position: relative;
     padding: 20px 0 20px 40px;
-    color: #D29D25;
+    color: #d29d25;
     font-weight: bold;
     cursor: pointer;
-  }
-  .push li:before {
+}
+.push li:before {
     position: absolute;
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #4F5151;
+    background: #4f5151;
     content: "";
     left: 0;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
     top: 27px;
-  }
-  .push li:after {
+}
+.push li:after {
     position: absolute;
-    border-left: 1px dotted #4F5151;
+    border-left: 1px dotted #4f5151;
     width: 1px;
     bottom: -12px;
     content: "";
     left: 3px;
     top: 48px;
-  }
-  .push li:hover:before{box-shadow: 0 0 0 10px rgba(0,0,0,.2)}
-  .push li:last-child:after {content: none;}
+}
+.push li:hover:before {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.push li:last-child:after {
+    content: none;
+}
 
-  .short-text {
+.short-text {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
-            line-clamp: 3; 
+    line-clamp: 3;
     -webkit-box-orient: vertical;
- }
+}
+
+.ingr {
+    display: table;
+    font-size: 18px;
+    line-height: 30px;
+    white-space: pre-line; /* не нужен <br> */
+    word-wrap: break-word; /* чтобы слова переносились на маленьком экране */
+}

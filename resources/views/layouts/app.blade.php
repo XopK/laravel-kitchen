@@ -11,18 +11,26 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/#recipes">Рецепты</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Мои рецепты</a>
-                    </li>
+                    @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home">Мои рецепты</a>
+                        </li>
+                    @endauth
                 </ul>
-                <div class="d-flex align-items-center" style="gap: 20px">
-                    <a href="/register" class="nav-item nav-link">Регистрация</a>
-                    <a href="" class="nav-item nav-link">Вход</a>
-                    <form action="" method="POST" class="form-inline">
-                        @csrf
-                        <input type="submit" class="btn btn-danger" value="Выход">
-                    </form>
-                </div>      
+                <div class="d-flex align-items-center" style="gap: 20px;">
+                    @guest
+                        <a href="/register" class="nav-item nav-link">Регистрация</a>
+                        <a href="/login" class="nav-item nav-link" style="margin-right: 10px">Вход</a>
+                    @endguest
+
+                    @auth
+                        <span>Здраствуй, {{ Auth::user()->name }}</span>
+                        <form action="{{ route('logout') }}" method="POST" class="form-inline">
+                            @csrf
+                            <input type="submit" class="btn btn-danger" value="Выход">
+                        </form>
+                    @endauth
+                </div>
             </div>
         </div>
     </nav>

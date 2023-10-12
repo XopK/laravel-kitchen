@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RecipesController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,18 +20,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [RecipesController::class, 'index']);
 
-Route::get('/register', [RegisterController::class, 'show']);
+Auth::routes();
 
-Route::post('/register/create', [RegisterController::class, 'create'])->name('register');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+Route::get('home/create', [HomeController::class, 'create'])->name('create');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/home/store', [HomeController::class, 'recipestore'])->name('r.store');
 
-Route::get('/detail', function(){
-    return view('recipes');
-});
+Route::get('/detail/{recipes}', [RecipesController::class, 'detail']);
+
+Route::get('/home/{recipes}/edit', [HomeController::class, 'edit'])->name('r.edit');
+
+Route::patch('/home/{recipes}/update', [HomeController::class, 'update'])->name('r.update');
+
+Route::get('/home/{recipes}/delete', [HomeController::class, 'delete'])->name('r.delete');
+
+Route::delete('/home/{recipes}/destroy', [HomeController::class, 'destroy'])->name('r.destroy');

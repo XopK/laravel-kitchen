@@ -11,4 +11,9 @@ class RecipesController extends Controller
         $resipes = recipes::latest()->get();
         return view("index", ['recipes' => $resipes]);
     }
+
+    public function detail($recipes){
+        $recipes = recipes::find($recipes);
+        return view('recipes', ['recipes' => $recipes]);
+    }
 }
