@@ -24,8 +24,8 @@
         <div class="recipes-block d-flex" style="margin-top: 30px; flex-wrap:wrap; gap: 25px">
             @foreach ($recipes as $item)
             <div class="card" style="width: 18rem;">
-                <img src="/images/{{$item->photo}}" class="card-img-top"
-                    alt="d4b1117173cc351dafe7231f097a019c.png">
+                <img src="/storage/img/{{$item->photo}}" class="card-img-top"
+                    alt="{{$item->photo}}">
                 <div class="card-body">
                     <h5 class="card-title">{{$item->title}}</h5>
                     <p class="card-text short-text">{{$item->description}}</p>

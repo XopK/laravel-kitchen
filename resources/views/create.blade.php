@@ -19,7 +19,7 @@
     <div class="container " style="margin-top: 70px ">
         <h1>Добавление рецепта</h1>
 
-        <form action="{{ route('r.store') }}" method="POST">
+        <form action="{{ route('r.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="exampleInputTitle" class="form-label">Навазние рецепта</label>

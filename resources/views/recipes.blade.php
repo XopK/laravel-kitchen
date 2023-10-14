@@ -19,7 +19,7 @@
             <div class="container" style="margin-top: 70px">
                 <h2>{{$recipes->title}}</h2>
                 <div class="d-flex" style="gap: 30px">
-                    <img src="/images/{{$recipes->photo}}" alt="cake.png"
+                    <img src="/storage/img/{{$recipes->photo}}" alt="{{$recipes->photo}}"
                         style="width: 45%">
                     <div class="text" style="max-width: 600px">
                         <p style="font-size: 17px">{{$recipes->description}}</p>

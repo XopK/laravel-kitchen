@@ -28,7 +28,7 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Описание</label>
-                <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="6">{{$recipes->decsription}}</textarea>
+                <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="6">{{$recipes->description}}</textarea>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Ингредиенты</label>

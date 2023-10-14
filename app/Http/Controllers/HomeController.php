@@ -39,9 +39,11 @@ class HomeController extends Controller
 
     public function recipestore(Request $request)
     {
+        $name = $request->file('photo')->hashName();
+        $path = $request->file('photo')->store('public/img');
         Auth::user()
             ->recipes()
-            ->create(['title' => $request->title, 'description' => $request->description, 'ingredients' => $request->ingredients, 'photo' => $request->photo]);
+            ->create(['title' => $request->title, 'description' => $request->description, 'ingredients' => $request->ingredients, 'photo' => $name]);
         return redirect()->route('home');
     }
 

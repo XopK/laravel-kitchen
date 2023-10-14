@@ -34,7 +34,7 @@
                         <div class="card mb-3" style="max-width: 1000px; border: none;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="/images/{{$item->photo}}" class="card-img-top" alt="{{$item->photo}}">
+                                    <img src="/storage/img/{{$item->photo}}" class="card-img-top" alt="{{$item->photo}}">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
